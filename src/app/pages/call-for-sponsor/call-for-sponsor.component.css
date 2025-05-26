@@ -1,0 +1,75 @@
+.call-for-sponsor {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem 0;
+  text-align: left;
+}
+
+.call-for-sponsor h1 {
+  color: var(--primary);
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.call-for-sponsor h2 {
+  border-bottom: 2px solid var(--primary);
+  color: var(--text-dark);
+  font-size: 1.8em;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.call-for-sponsor p {
+  margin: 1rem 0;
+}
+
+.call-for-sponsor ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.call-for-sponsor ul li {
+  background-color: var(--bg-light);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  padding-left: 2.5rem;
+  position: relative;
+}
+
+.call-for-sponsor ul > ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.call-for-sponsor ul li:before {
+  color: #27ae60;
+  content: '✔';
+  position: absolute;
+  left: 1rem;
+}
+
+.call-for-sponsor a {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.call-for-sponsor a:hover {
+  text-decoration: underline;
+}
+
+.call-for-sponsor .cta {
+  margin-top: 2rem;
+  text-align: center;
+}

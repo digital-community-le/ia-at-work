@@ -1,0 +1,216 @@
+<!-- Sezione Descrizione Evento (Hero) -->
+<section class="event-hero" id="evento">
+  <div class="hero-content">
+    <div class="hero-image">
+    </div>
+    <div class="hero-text">
+      <h1>
+        <span class="highlight">AI at Work</span><br />
+        L’intelligenza artificiale nel lavoro reale
+      </h1>
+
+      <p class="lead">
+        Un confronto dal vivo tra professionisti del digitale per capire davvero come l’IA sta cambiando il modo in cui
+        lavoriamo. Senza slide, senza accademia — solo dialogo concreto, domande vere e casi reali.
+      </p>
+
+      <div class="cta-container">
+        @if(featureToggleService.isFeatureEnabled('eventTikets')) {
+        <button mat-raised-button color="primary" routerLink="/biglietti">
+          🎟️ Prenota il tuo posto
+        </button>
+        } @else {
+        <button mat-raised-button color="primary" disabled>
+          🎟️ Prenotazione non disponibile
+        </button>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Sezione Organizzatori -->
+<section class="organizers section">
+  <p>Organizzato da:</p>
+  <img ngSrc="images/logo-lecce-digital-community-colore.webp" alt="Lecce Digital Community" width="150" height="50" />
+  <img ngSrc="images/Logo GDG Lecce vertical gray.png" alt="Google Developers Group Lecce" width="70" height="50" />
+</section>
+
+<!-- Sezione Introduzione -->
+<section class="event-intro section gradient-accent">
+  <div class="container">
+    <h2><mat-icon>emoji_objects</mat-icon> Benvenuti a AI at Work</h2>
+    <p>
+      Un evento unico per esplorare come l’intelligenza artificiale sta trasformando il nostro modo di lavorare. Non
+      parleremo di teorie astratte, ma di esperienze concrete, sfide quotidiane e opportunità reali.
+    </p>
+    <p>
+      L’evento è organizzato da <strong>Lecce Digital Community</strong> e <strong>Google Developers Group di
+        Lecce</strong>, ed è pensato come un salotto aperto, dove 4 professionisti del digitale discuteranno – guidati
+      da un moderatore – di come l’IA sta cambiando i loro ambiti lavorativi, quali strumenti stanno usando, e cosa
+      aspettarsi nel futuro.
+    </p>
+  </div>
+</section>
+
+<!-- Sezione Perché Partecipare -->
+<section class="event-details section gradient-light">
+  <div class="container">
+    <h2>🔍 Perché partecipare?</h2>
+    <div class="reasons-grid mat-card-grid">
+      <mat-card class="reason-item mat-elevation-z2">
+        <mat-card-header>
+          <mat-icon>my_location</mat-icon>
+          <mat-card-title>Confronto reale</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          Ascolta storie autentiche di chi usa l’IA ogni giorno.
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="reason-item mat-elevation-z2">
+        <mat-card-header>
+          <mat-icon>groups</mat-icon>
+          <mat-card-title>Networking</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          Incontra altri professionisti, scambia idee e crea connessioni.
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="reason-item mat-elevation-z2">
+        <mat-card-header>
+          <mat-icon>lightbulb</mat-icon>
+          <mat-card-title>Riflettiamo insieme</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          Partecipa a un dialogo aperto su opportunità e sfide dell’IA.
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="reason-item mat-elevation-z2">
+        <mat-card-header>
+          <mat-icon>local_bar</mat-icon>
+          <mat-card-title>Rinfresco incluso</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          Goditi un momento di relax e networking con una consumazione offerta.
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="reason-item mat-elevation-z2">
+        <mat-card-header>
+          <mat-icon>confirmation_number</mat-icon>
+          <mat-card-title>Accesso gratuito</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          L’evento è completamente gratuito, ma i posti sono limitati.
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>
+
+<!-- Sezione Dettagli Evento -->
+<section class="event-details section">
+  <div class="container">
+    <h2>📅 Dettagli dell'evento</h2>
+
+    <dl class="event-info">
+      <div>
+        <dt>📅 Data:</dt>
+        <dd>9 luglio 2025</dd>
+      </div>
+      <div>
+        <dt>🕒 Orario:</dt>
+        <dd>19:00 – 22:00</dd>
+      </div>
+      <div>
+        <dt>📍 Luogo:</dt>
+        <dd><a href="https://maps.app.goo.gl/Bmac2GPfvPWNJPz69">Masseria Tagliatelle, Via del Ninfeo, Lecce</a></dd>
+      </div>
+      <div>
+        <dt>🎟️ Biglietto:</dt>
+        <dd>Gratuito – consumazione inclusa</dd>
+      </div>
+    </dl>
+
+    <p>
+      L’evento è gratuito e l'ingresso è libero, ma solo chi sarà in possesso del biglietto avrà diritto alla consumazione
+      gratuita, diversamente cis i potrà rivolgere al bar della struttura. I posti sono limitati, quindi assicurati
+      di prenotare il tuo biglietto il prima possibile!
+    </p>
+
+    <div class="cta-container">
+      @if(featureToggleService.isFeatureEnabled('eventTikets')) {
+      <button mat-raised-button color="primary" routerLink="/biglietti">
+        🎟️ Prenota il tuo posto
+      </button>
+      } @else {
+      <button mat-raised-button color="primary" disabled>
+        🎟️ Prenotazione non disponibile
+      </button>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Sezione Sponsor & Partner -->
+<section class="sponsor-partner section">
+  <div class="container">
+    <h2>🤝 Sponsor & Partner</h2>
+    <div class="sponsor-grid">
+      <div class="image-container">
+        <img ngSrc="images/logoipsum.svg" alt="Sponsor 1" fill />
+      </div>
+      <div class="image-container">
+        <img ngSrc="images/logoipsum.svg" alt="Sponsor 2" fill />
+      </div>
+      <div class="image-container">
+        <img ngSrc="images/logoipsum.svg" alt="Sponsor 3" fill />
+      </div>
+      <div class="image-container">
+        <img ngSrc="images/logoipsum.svg" alt="Sponsor 4" fill />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sezione Call for Speakers -->
+<section class="section gradient-accent" id="call-for-speakers">
+  <div class="container cta-container">
+    <h2>🎤 Call for Speakers</h2>
+    @if (featureToggleService.isFeatureEnabled('callForSpeaker')) {
+    <p>
+      Hai vissuto l’impatto dell’IA sul tuo lavoro? Porta la tua storia sul palco e condividila con altri
+      professionisti. Cerchiamo voci autentiche, critiche e concrete.
+    </p>
+    <button mat-raised-button color="primary" routerLink="/call-for-speaker">
+      Invia la tua proposta
+    </button>
+    } @else {
+    <p>La call for speakers non è ancora attiva.</p>
+    }
+  </div>
+
+</section>
+
+<!-- Sezione Call for Sponsors -->
+<section class="section" id="call-for-sponsor">
+
+  <div class="container cta-container">
+    <h2>🤝 Call for Sponsors</h2>
+    @if (featureToggleService.isFeatureEnabled('callForSponsor')) {
+    <p>
+      Vuoi supportare un evento di valore per la community tech e far conoscere il tuo brand?
+      Unisciti a noi come sponsor e valorizza il tuo impegno per il futuro del lavoro.
+    </p>
+    <button mat-raised-button color="accent" routerLink="/call-for-sponsor">
+      Scopri come sponsorizzare
+    </button>
+    } @else {
+    <p>Le sponsorizzazioni non sono ancora aperte.</p>
+    }
+  </div>
+</section>

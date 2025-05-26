@@ -1,0 +1,242 @@
+/* Sezione Hero */
+.event-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #1c4461, #00ffff) no-repeat center center;
+  background-image: url("/images/ai-work-hero.jpeg");
+  color: white;
+  padding: 4rem 2rem;
+
+  .hero-text {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius);
+    padding: 2rem;
+    max-width: var(--max-width);
+    color: var(--text-dark);
+    flex: 1 1 50%;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image {
+    flex: 1 1 40%;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  .hero-text .highlight {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff08c1;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-text p.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  /* Hero Section */
+  .hero-image-large {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.cta-container {
+  margin-top: 1.5rem;
+}
+
+/* Sezione Benvenuti */
+.event-intro h2 mat-icon {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* Sezione Sponsor & Partner */
+
+.sponsor-partner {
+  background: radial-gradient(
+    circle,
+    rgba(239, 239, 239, 0.8),
+    rgba(193, 193, 193, 0.6)
+  );
+}
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: auto;
+  gap: 3rem;
+  justify-items: center;
+}
+
+.sponsor-grid .image-container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.sponsor-grid img:hover {
+  filter: none;
+}
+
+/* Sezione Perché partecipare */
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.reason-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  mat-card-header {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    mat-icon {
+      color: var(--primary);
+    }
+
+    mat-card-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text-dark);
+    }
+  }
+
+  mat-card-content {
+    font-size: 0.95rem;
+    color: #333;
+    text-align: center;
+  }
+}
+
+.reasons-grid .mat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reasons-grid .mat-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.reasons-grid .mat-card:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Dettagli Evento */
+.event-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px;
+
+  &>div {
+    display: flex;;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.event-info dt {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.event-info dd {
+  margin: 0;
+  padding: 0 0 0 0px;
+}
+
+/* Sezione Organizzatori */
+.organizers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.organizers p {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+  .event-hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .event-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .organizers {
+    flex-direction: column;
+  }
+
+  .sponsor-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .event-info {
+    grid-template-columns: 1fr;
+
+    &>div {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+}

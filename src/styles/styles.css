@@ -1,0 +1,114 @@
+@use '@angular/material' as mat;
+
+:root {
+  --primary: #ff08c1;
+  --primary-light: #ff78da;
+  --accent: #00ffff;
+  --text-dark: #1c4461;
+  --text-light: #f8f5ff;
+  --bg-dark: #1c4461;
+  --bg-light: #f9fafc;
+  --radius: 1rem;
+  --max-width: 60ch;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: var(--max-width);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+h1 .highlight {
+  color: var(--primary);
+  font-size: 2.5rem;
+}
+
+h1 .subtitle {
+  color: var(--text-dark);
+}
+
+.full-width {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.divider {
+  background-color: var(--primary);
+}
+
+.section {
+  padding: 3rem 0;
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      margin-top: 0;
+    }
+  }
+}
+
+.lead {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.extra-info {
+  font-size: 0.95rem;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+
+  button {
+    margin: 1rem 0;
+  }
+}
+
+.gradient-primary {
+  background: linear-gradient(180deg, #1c4461 0%, var(--accent) 100%);
+}
+
+.gradient-light {
+  background: linear-gradient(180deg, #f8fbfc 0%, #eef2f7 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(180deg, #f8f5ff 0%, #e0f5ff 100%);
+}
+
+button[mat-raised-button] {
+  transition: transform 0.2s ease;
+}
+
+button[mat-raised-button]:hover {
+  transform: scale(1.03);
+}

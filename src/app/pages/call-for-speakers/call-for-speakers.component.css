@@ -1,0 +1,59 @@
+.call-for-speakers {
+  padding: 2rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.call-for-speakers h1 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.call-for-speakers h2 {
+  font-size: 1.8em;
+  color: var(--text-dark);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.5rem;
+}
+
+.call-for-speakers ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.call-for-speakers ul li {
+  background-color: var(--bg-light);
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.call-for-speakers p {
+  margin: 1rem 0;
+}
+
+.call-for-speakers a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.call-for-speakers a:hover {
+  text-decoration: underline;
+}
+
+.call-for-speakers .cta {
+  text-align: center;
+  margin-top: 2rem;
+}
