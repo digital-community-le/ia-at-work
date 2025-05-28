@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { inject } from '@angular/core';
 import { FeatureToggleService } from './services/feature-toggle.service';
 import { APP_FEATURES } from './app.config.token';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
   {
@@ -17,5 +18,9 @@ export const routes: Routes = [
     path: 'call-for-sponsor',
     loadComponent: () => import('./pages/call-for-sponsor/call-for-sponsor.component').then(m => m.CallForSponsorComponent),
     //canMatch: [() => inject(FeatureToggleService).isFeatureEnabled(APP_FEATURES.callForSponsor)]
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicyComponent
   }
 ];
