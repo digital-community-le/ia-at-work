@@ -5,5 +5,32 @@
 }
 
 .footer {
-  border-top: 1px solid var(--primary,)
+  border-top: 1px solid var(--primary);
+  margin-top: 3rem;;
+}
+
+@media print {
+  .header, .footer {
+    display: none;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+
+  h1, h2, h3 {
+    font-weight: bold;
+    color: black;
+  }
+
+  p, ul {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  .section {
+    padding: 1rem;
+    page-break-inside: avoid;
+  }
 }

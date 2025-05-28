@@ -1,7 +1,6 @@
 @use '@angular/material' as mat;
 @use './_theme-colors' as my-theme;
 
-
 :root {
   --mat-divider-color: var(--primary);
 }
@@ -9,10 +8,21 @@
 // Define theme config
 html {
   color-scheme: light;
-  @include mat.theme((color: (theme-type: light,
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
         primary: my-theme.$primary-palette,
         tertiary: my-theme.$tertiary-palette,
       ),
-      typography: Roboto,
-      density: 0));
+      typography: (
+        plain-family: Raleway,
+        brand-family: Raleway,
+        bold-weight: 900,
+        medium-weight: 500,
+        regular-weight: 300,
+      ),
+      density: 0,
+    )
+  );
 }

@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { PageHeaderComponent } from '../../components/page-header/page-header.component';
 
 @Component({
-  selector: 'app-call-for-speakers',
   standalone: true,
-  imports: [PageHeaderComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './call-for-speakers.component.html',
-  styleUrls: ['./call-for-speakers.component.css']
+  imports: [PageHeaderComponent],
+  selector: 'app-privacy-policy',
+  templateUrl: './privacy-policy.component.html',
+  styleUrls: ['./privacy-policy.component.css']
 })
-export class CallForSpeakersComponent { }
+export class PrivacyPolicyComponent {
+}

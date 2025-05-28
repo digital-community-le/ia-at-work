@@ -1,0 +1,23 @@
+:host {
+  background: linear-gradient(90deg, #1c4461, #00ffff) no-repeat center center;
+  background-image: url('/images/ai-work-hero.jpeg');
+  background-size: cover;
+  padding: 4rem 2rem;
+  padding-top: calc(4rem + var(--app-header-height));
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;;
+
+  h1 {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin: 0;
+    padding: 4px 18px;
+    color: var(--primary);
+    font-size: 2.5em;
+    text-align: center;
+    background-color: #00ffff;
+  }
+}

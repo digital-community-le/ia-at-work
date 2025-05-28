@@ -1,0 +1,55 @@
+/* Adattamento dello stile della pagina Privacy Policy per uniformarla alla pagina Call for Sponsor */
+.privacy-policy {
+  font-family: Arial, sans-serif;
+  padding-top: var(--app-header-height);
+  text-align: left;
+}
+
+.privacy-policy h1 {
+  color: var(--primary);
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.privacy-policy h2 {
+  border-bottom: 2px solid var(--primary);
+  color: var(--text-dark);
+  font-size: 1.8em;
+}
+
+/* Stile per la versione stampabile della pagina Privacy Policy */
+@media print {
+  .privacy-policy {
+    font-family: "Times New Roman", serif;
+    color: #000;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+  }
+
+  .privacy-policy h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .privacy-policy h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .privacy-policy p, .privacy-policy ul {
+    font-size: 16px;
+    margin: 0.5rem 0;
+  }
+
+  .privacy-policy ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+  }
+}
