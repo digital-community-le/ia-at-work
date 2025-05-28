@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:ai-at-work": "node dist/ai-at-work/server/server.mjs"
+    "serve:ssr:ai-at-work": "node dist/ai-at-work/server/server.mjs",
+    "ci": "",
+    "deploy": "firebase deploy --only hosting"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +25,7 @@
     "@angular/router": "^19.2.0",
     "@angular/ssr": "^19.2.13",
     "express": "^4.18.2",
+    "firebase": "^11.8.1",
     "ngx-markdown": "^19.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
