@@ -16,9 +16,9 @@
 
       <div class="cta-container">
         @if (featureToggleService.isFeatureEnabled('eventTickets')) {
-          <button mat-raised-button color="primary" routerLink="/biglietti">
+          <a mat-raised-button color="primary" href="https://www.eventbrite.com/e/1381562553789">
             🎟️ Prenota il tuo posto
-          </button>
+          </a>
         } @else {
           <button mat-raised-button color="primary" disabled>
             🎟️ Prenotazione non disponibile
