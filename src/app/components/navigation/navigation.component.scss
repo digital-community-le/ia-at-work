@@ -12,11 +12,13 @@
   .nav-list {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 0.8rem;
 
     .mat-mdc-list-item {
       width: fit-content;
+      cursor: pointer;
     }
   }
 }
 }
+

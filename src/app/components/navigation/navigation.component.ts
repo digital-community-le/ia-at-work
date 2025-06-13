@@ -26,18 +26,27 @@ import { MatButtonModule } from '@angular/material/button';
   template: `
     <mat-nav-list class="nav-list">
       @if (featureToggleService.isFeatureEnabled('callForSpeaker')) {
-        <a mat-list-item routerLink="/call-for-speaker" routerLinkActive="active-link"
+        <a
+          mat-list-item
+          routerLink="/call-for-speaker"
+          routerLinkActive="active-link"
           >Call for speaker</a
         >
       }
 
       @if (featureToggleService.isFeatureEnabled('callForSponsor')) {
-        <a mat-list-item routerLink="/call-for-sponsor" routerLinkActive="active-link"
+        <a
+          mat-list-item
+          routerLink="/call-for-sponsor"
+          routerLinkActive="active-link"
           >Call for sponsor</a
         >
       }
 
-      <a mat-list-item routerLink="/privacy-policy" routerLinkActive="active-link"
+      <a
+        mat-list-item
+        routerLink="/privacy-policy"
+        routerLinkActive="active-link"
         >Privacy Policy</a
       >
 
@@ -50,11 +59,11 @@ import { MatButtonModule } from '@angular/material/button';
       >
     </mat-nav-list>
 
-    @if( featureToggleService.isFeatureEnabled('eventTickets')) {
+    @if (featureToggleService.isFeatureEnabled('eventTickets')) {
       <mat-divider [vertical]="horizontal()"></mat-divider>
 
-      <a mat-flat-button href="https://www.eventbrite.com/e/1381562553789"
-        >🎟️ Prenota il tuo posto</a
+      <a mat-flat-button href="https://www.eventbrite.com/e/1381562553789">
+        Prenota il tuo posto</a
       >
     }
   `,
@@ -62,5 +71,7 @@ import { MatButtonModule } from '@angular/material/button';
 export class NavigationComponent {
   protected readonly featureToggleService = inject(FeatureToggleService);
 
-  readonly horizontal = input<boolean, unknown>(false, { transform: coerceBooleanProperty });
+  readonly horizontal = input<boolean, unknown>(false, {
+    transform: coerceBooleanProperty,
+  });
 }

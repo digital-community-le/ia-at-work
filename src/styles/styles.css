@@ -80,12 +80,12 @@ h1 .subtitle {
 }
 
 .cta-container {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  max-width: 600px;
-  text-align: center;
+  max-width: 600px; */
+  text-align: right;
   margin: 0 auto;
 
   button {
@@ -113,6 +113,23 @@ button[mat-raised-button]:hover {
   transform: scale(1.03);
 }
 
+/* menu styles */
+.nav-list {
+  > a {
+    > span span {
+      font-weight: 500;
+    }
+  }
+}
+
+.navigation {
+  .mat-mdc-button-base {
+    background-color: #ff08c1 !important;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
 
 @media (max-width: 600px) {
   .container {
@@ -130,9 +147,15 @@ button[mat-raised-button]:hover {
   .section {
     padding: 2rem 1.5rem;
   }
+}
 
+@media (max-width: 768px) {
   .cta-container {
-    padding: 1rem;
+    padding: 0;
+  }
+
+  .cta-container .cta-btn {
+    width: 100%;
   }
 }
 

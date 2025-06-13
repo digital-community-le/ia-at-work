@@ -49,6 +49,17 @@
   .hero-text h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    margin-top: 18px;
+  }
+
+  .hero-text .cta-btn {
+    background-color: #ff08c1;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    font-size: 18px;
+    padding: 34px 32px;
+    text-align: center;
   }
 
   .hero-text p.lead {
@@ -244,5 +255,17 @@
       flex-direction: column;
       align-items: start;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .event-hero .hero-text {
+    padding: 24px 24px;
+  }
+
+  .event-hero h1 {
+    margin-top: 10px;
+    font-size: 32px !important;
+    line-height: 1.4;
   }
 }
