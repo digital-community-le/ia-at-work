@@ -106,23 +106,6 @@ button[mat-raised-button]:hover {
   transform: scale(1.03);
 }
 
-/* menu styles */
-.nav-list {
-  > a {
-    > span span {
-      font-weight: 500;
-    }
-  }
-}
-
-.navigation {
-  .mat-mdc-button-base {
-    background-color: #ff08c1 !important;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-}
-
 
 @media (max-width: 600px) {
   .container {

@@ -62,7 +62,7 @@ import { MatButtonModule } from '@angular/material/button';
     @if (featureToggleService.isFeatureEnabled('eventTickets')) {
       <mat-divider [vertical]="horizontal()"></mat-divider>
 
-      <a mat-flat-button href="https://www.eventbrite.com/e/1381562553789">
+      <a mat-flat-button class="cta-btn" href="https://www.eventbrite.com/e/1381562553789">
         Prenota il tuo posto</a
       >
     }
