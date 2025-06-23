@@ -151,7 +151,7 @@
         </dd>
       </div>
       <div>
-        <dt>🎟️ Biglietto:</dt>
+        <dt>🎟️ Ticket:</dt>
         <dd>Gratuito – consumazione inclusa</dd>
       </div>
     </dl>
@@ -165,7 +165,7 @@
 
     <div class="cta-container">
       @if (featureToggleService.isFeatureEnabled('eventTickets')) {
-        <button mat-raised-button color="primary" routerLink="/biglietti">
+        <button mat-raised-button class="cta-btn" color="primary" routerLink="/biglietti">
           🎟️ Prenota il tuo posto
         </button>
       } @else {

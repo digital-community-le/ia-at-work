@@ -26,6 +26,7 @@
     width: 100%;
     gap: 3rem;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
@@ -58,7 +59,7 @@
     font-weight: 700;
     color: #fff;
     font-size: 18px;
-    padding: 34px 32px;
+    padding: 1.5rem;
     text-align: center;
   }
 
@@ -204,11 +205,20 @@
   font-weight: bold;
   display: flex;
   align-items: center;
+  margin-right: .5rem;
+  white-space: nowrap;
 }
 
 .event-info dd {
   margin: 0;
   padding: 0 0 0 0px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  & > * {
+    text-overflow: ellipsis;
+  }
 }
 
 /* Sezione Organizzatori */
