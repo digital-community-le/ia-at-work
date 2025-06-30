@@ -177,23 +177,16 @@
   </div>
 </section>
 
-<!-- Sezione Sponsor & Partner -->
+<!-- Sezione Sponsor -->
 <section class="sponsor-partner section">
   <div class="container">
-    <h2>🤝 Sponsor & Partner</h2>
+    <h2>🤝 I nostri Sponsor</h2>
     <div class="sponsor-grid">
-      <div class="image-container">
-        <img ngSrc="images/logoipsum.svg" alt="Sponsor 1" fill />
-      </div>
-      <div class="image-container">
-        <img ngSrc="images/logoipsum.svg" alt="Sponsor 2" fill />
-      </div>
-      <div class="image-container">
-        <img ngSrc="images/logoipsum.svg" alt="Sponsor 3" fill />
-      </div>
-      <div class="image-container">
-        <img ngSrc="images/logoipsum.svg" alt="Sponsor 4" fill />
-      </div>
+      @for(sponsor of sponsors; track sponsor.name) {
+        <a class="image-container" href="{{ sponsor.url }}" target="_blank">
+          <img ngSrc="{{ sponsor.logo }}" alt="{{ sponsor.name }}" fill />
+        </a>
+      }
     </div>
   </div>
 </section>
