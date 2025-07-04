@@ -221,6 +221,15 @@
   }
 }
 
+.event-details .note {
+  padding: .5rem 1rem;
+  background-color: #ededed;
+  border-left: var(--primary) solid 3px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
 /* Sezione Organizzatori */
 .organizers {
   display: flex;
