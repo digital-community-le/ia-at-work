@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject, ViewEncapsulation } from '@
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
-import { environment } from '../../../environments/environment.dev';
+import { environment } from '../../../environments/environment';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 export type TesseramentoReminderData = {}

@@ -13,7 +13,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { TesseramentoReminderDirective } from '../../directives/tesseramento-reminder.directive';
 import { EventbriteService } from '../../services/eventbrite.service';
-import { environment } from '../../../environments/environment.dev';
+import { environment } from '../../../environments/environment';
 
 @Component({
   standalone: true,

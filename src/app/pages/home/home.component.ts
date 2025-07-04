@@ -8,7 +8,7 @@ import { FeatureToggleService } from '../../services/feature-toggle.service';
 import { NgOptimizedImage } from '@angular/common';
 import { SPONSORS } from '../../constants/sponsors';
 import { EventbriteService as TicketService } from '../../services/eventbrite.service';
-import { environment } from '../../../environments/environment.dev';
+import { environment } from '../../../environments/environment';
 import { TesseramentoReminderDirective } from '../../directives/tesseramento-reminder.directive';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Directive, inject, output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { TesseramentoReminderComponent } from '../components/tesseramento-reminder/tesseramento-reminder.component';
-import { environment } from '../../environments/environment.dev';
+import { environment } from '../../environments/environment';
 
 @Directive({
   selector: '[appTesseramentoReminder]',
