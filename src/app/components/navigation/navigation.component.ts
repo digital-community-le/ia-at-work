@@ -11,11 +11,14 @@ import { FeatureToggleService } from '../../services/feature-toggle.service';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { TesseramentoReminderDirective } from '../../directives/tesseramento-reminder.directive';
+import { EventbriteService } from '../../services/eventbrite.service';
+import { environment } from '../../../environments/environment.dev';
 
 @Component({
   standalone: true,
   selector: 'app-navigation',
-  imports: [MatListModule, RouterModule, MatDividerModule, MatButtonModule],
+  imports: [MatListModule, RouterModule, MatDividerModule, MatButtonModule, TesseramentoReminderDirective],
   styleUrl: './navigation.component.scss',
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -62,16 +65,22 @@ import { MatButtonModule } from '@angular/material/button';
     @if (featureToggleService.isFeatureEnabled('eventTickets')) {
       <mat-divider [vertical]="horizontal()"></mat-divider>
 
-      <a mat-flat-button class="cta-btn" href="https://www.eventbrite.com/e/1381562553789">
-        Prenota il tuo posto</a
-      >
+      <button mat-flat-button class="cta-btn" appTesseramentoReminder (tesseramentoCompleted)="goToTicketPage()">
+        Prenota il tuo posto
+      </button>
     }
   `,
 })
 export class NavigationComponent {
   protected readonly featureToggleService = inject(FeatureToggleService);
+  private readonly ticketService = inject(EventbriteService);
 
   readonly horizontal = input<boolean, unknown>(false, {
     transform: coerceBooleanProperty,
   });
+
+  goToTicketPage() {
+    const url = this.ticketService.getEventUrl(environment.eventbriteEventId);
+    window.location.href = url;
+  }
 }

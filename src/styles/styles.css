@@ -11,6 +11,8 @@
   --radius: 1rem;
   --max-width: 80ch;
   --app-header-height: 64px;
+  --text-on-primary: #ffffff;
+  --text-on-accent: #000000;
 }
 
 body {

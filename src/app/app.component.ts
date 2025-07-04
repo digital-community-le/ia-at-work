@@ -3,6 +3,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   standalone: true,
@@ -14,6 +15,7 @@ import { MatDividerModule } from '@angular/material/divider';
     RouterModule,
     FooterComponent,
     MatDividerModule,
+    MatDialogModule,
   ],
   template: `
     <header class="header">
@@ -28,4 +30,5 @@ import { MatDividerModule } from '@angular/material/divider';
   `,
   styleUrl: './app.component.css',
 })
-export class AppComponent { }
+export class AppComponent {
+}

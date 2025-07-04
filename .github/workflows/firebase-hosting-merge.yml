@@ -11,8 +11,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Inject API Key into environment.prod.ts
+        run: |
+          sed -i "s/eventbriteToken: *'.*'/eventbriteToken: '${{ secrets.EVENTBRITE_API_KEY }}'/" src/environments/environment.prod.ts
+
+      - name: Build the project
+        run: npm run build -- --configuration production
+
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_IA_AL_LAVORO }}

@@ -44,7 +44,7 @@
   .hero-text .highlight {
     font-size: 2rem;
     font-weight: bold;
-    color: #ff08c1;
+    color: var(--primary, #ff08c1);
   }
 
   .hero-text h1 {
@@ -54,10 +54,10 @@
   }
 
   .hero-text .cta-btn {
-    background-color: #ff08c1;
+    background-color: var(--primary, #ff08c1);
     text-transform: uppercase;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-on-primary, #ffffff);
     font-size: 18px;
     padding: 1.5rem;
     text-align: center;

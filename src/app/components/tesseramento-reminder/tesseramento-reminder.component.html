@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>
+  <span>⚠️</span>
+  <span>Prima di continuare...</span>
+</h2>
+
+<mat-dialog-content>
+  <div>
+    <p>
+      Ti ricordiamo che l’evento si svolgerà presso <a href="https://www.masseriatagliatelle.it/" target="_blank"
+        rel="noopener noreferrer">Masseria Tagliatelle</a>, che è gestita dall’associazione <a
+        href="https://www.tdfmediterranea.org">TDF Mediterranea</a>.
+    </p>
+    <p>
+      L’ingresso è riservato ai soli soci dell'associazione, per cui <strong>per accedere è obbligatorio sottoscrivere
+        la tessera annuale entro 24 ore dal giorno dell'evento</strong> (quindi entro il 7 luglio).
+    </p>
+
+    <p>
+      👉 <strong>Se ancora non hai la tessera del 2025, puoi richiederla comodamente online.</strong>
+    </p>
+
+    <p>
+      Il tesseramento costa solo 2€, da versare in loco al momento del ritiro della tessera, ed ha validità annuale.
+    </p>
+
+    <p>
+      Per maggiori informazioni sulla tessera e sull'associazione, puoi visitare il sito ufficiale di <a
+        href="https://www.tdfmediterranea.org">TDF Mediterranea</a>.
+    </p>
+  </div>
+
+  <div class="actions">
+    <a mat-raised-button class="cta-btn" [href]="tesseramentoModuleUrl" target="_blank" rel="noopener noreferrer"
+      color="primary">
+      Richiedi tessera
+    </a>
+
+    <button mat-button (click)="closeDialog()" color="primary">
+      Ho già la tessera del 2025
+    </button>
+  </div>
+</mat-dialog-content>

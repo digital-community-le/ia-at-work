@@ -16,14 +16,15 @@
 
       <div class="cta-container">
         @if (featureToggleService.isFeatureEnabled('eventTickets')) {
-          <a
+          <button
             mat-raised-button
             color="primary"
-            href="https://www.eventbrite.com/e/1381562553789"
             class="cta-btn"
+            appTesseramentoReminder
+            (tesseramentoCompleted)="goToTicketPage()"
           >
             Prenota il tuo posto
-          </a>
+        </button>
         } @else {
           <button mat-raised-button color="primary" disabled>
             🎟️ Prenotazione non disponibile
@@ -37,18 +38,30 @@
 <!-- Sezione Organizzatori -->
 <section class="organizers section">
   <p>Organizzato da:</p>
-  <img
-    ngSrc="images/logo-lecce-digital-community-colore.webp"
-    alt="Lecce Digital Community"
-    width="150"
-    height="50"
-  />
-  <img
-    ngSrc="images/Logo GDG Lecce vertical gray.png"
-    alt="Google Developers Group Lecce"
-    width="70"
-    height="50"
-  />
+  <a href="https://www.leccedigitalcommunity.it" target="_blank" class="logo-link" aria-label="Lecce Digital Community" matTooltip="Lecce Digital Community">
+    <img
+      ngSrc="images/logo-lecce-digital-community-colore.webp"
+      alt="Lecce Digital Community"
+      width="150"
+      height="50"
+    />
+  </a>
+  <a href="https://gdg.community.dev/gdg-lecce/" target="_blank" class="logo-link" aria-label="Google Developers Group Lecce" matTooltip="Google Developers Group Lecce">
+    <img
+      ngSrc="images/Logo GDG Lecce vertical gray.png"
+      alt="Google Developers Group Lecce"
+      width="70"
+      height="50"
+    />
+  </a>
+  <a href="https://www.tdfmediterranea.org" target="_blank" class="logo-link" aria-label="TdF Mediterranea" matTooltip="TdF Mediterranea">
+    <img
+      ngSrc="images/TdF_Logo_Tavola-300x262.png"
+      alt="TdF Mediterranea"
+      width="58"
+      height="50"
+    />
+  </a>
 </section>
 
 <!-- Sezione Introduzione -->
@@ -152,24 +165,22 @@
       </div>
       <div>
         <dt>🎟️ Ticket:</dt>
-        <dd>Gratuito – 1 consumazione inclusa</dd>
+        <dd>Gratuito</dd>
       </div>
     </dl>
 
     <p>
-      <strong>L’evento è gratuito e l'ingresso è libero</strong>, ma solo chi sarà in possesso
-      del biglietto avrà diritto alla consumazione gratuita, diversamente ci si
-      potrà rivolgere al bar della struttura. I posti sono limitati, quindi
-      assicurati di prenotare il tuo biglietto il prima possibile!
+      L’evento è gratuito, ma i posti sono limitati. Assicurati di prenotare il tuo biglietto il prima possibile!
     </p>
 
     <div class="cta-container">
       @if (featureToggleService.isFeatureEnabled('eventTickets')) {
-        <button mat-raised-button class="cta-btn" color="primary" routerLink="/biglietti">
+        <button mat-raised-button class="cta-btn" appTesseramentoReminder
+        (tesseramentoCompleted)="goToTicketPage()">
           🎟️ Prenota il tuo posto
         </button>
       } @else {
-        <button mat-raised-button color="primary" disabled>
+        <button mat-raised-button disabled>
           🎟️ Prenotazione non disponibile
         </button>
       }
