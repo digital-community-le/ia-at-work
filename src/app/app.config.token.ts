@@ -19,8 +19,8 @@ export const APP_CONFIG = new InjectionToken<AppConfig>('app.config', {
   factory: () => ({
     features: {
       eventTickets: true,
-      callForSpeaker: true,
-      callForSponsor: true,
+      callForSpeaker: false,
+      callForSponsor: false,
     }
   }),
 });
